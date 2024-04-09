@@ -2,11 +2,12 @@
   "name": "website",
   "version": "0.2.0",
   "private": true,
+  "type": "module",
   "dependencies": {
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.4",
-    "@mui/material": "^5.15.4",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
@@ -16,17 +17,18 @@
     "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.2",
-    "react-scripts": "^5.0.1",
+    "react-router-dom": "^6.22.3",
     "typescript": "^5.3.3",
-    "web-vitals": "^3.5.1"
+    "vite": "^5.1.6",
+    "web-vitals": "^3.5.2"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
     "format": "npm run lint --fix & npx prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
   },
@@ -44,6 +46,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard-with-typescript": "^43.0.0",
@@ -51,6 +54,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
     "gh-pages": "6.1.1",
-    "prettier": "^3.2.2"
+    "prettier": "^3.2.2",
+    "vitest": "^1.4.0"
   }
 }

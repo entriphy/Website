@@ -8,11 +8,9 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App(): ReactElement {
-  // if using custom domain set basename to '/' for custom
-  // if using github's domain set basename to '/<repo-name>'
   return (
     <div className="App">
-      <Router basename={'/'}>
+      <Router basename={import.meta.env.BASE_URL}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
